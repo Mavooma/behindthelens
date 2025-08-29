@@ -1,3 +1,10 @@
+const toggleButton = document.querySelector('.navbar-toggle');
+const menu = document.querySelector('.navbar-menu');
+
+toggleButton.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
 // Function to check if the service cards are visible on scroll
 function checkCards() {
     const serviceCards = document.querySelectorAll('.service-card');

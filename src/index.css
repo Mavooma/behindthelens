@@ -31,7 +31,7 @@ nav .navbar-brand {
     font-family: "Playfair Display", serif;
     font-size: 1.6rem;
     font-weight: bold;
-    color: grey;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -49,12 +49,12 @@ nav ul li a {
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    color: gray;
+    color: #fff;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #fff;
+    color: gray;
 }
 
 /* Dropdown Menu */
@@ -310,7 +310,7 @@ color: transparent;
 .services-section {
     padding: 40px;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .services-section h2 {
@@ -333,10 +333,10 @@ color: transparent;
 }
 
 .service-card {
-    background: #2B78B3;
+    background: #444;
     border: 1px solid #666;
     border-radius: 15px 50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
     overflow: hidden;
     width: 240px; /* Fixed width for cards */
     text-align: center;
@@ -357,7 +357,7 @@ color: transparent;
     margin: 15px 0;
     font-size: 1rem;
     font-weight: bold;
-    color: black;
+    color: #08979d;
 }
 
 .service-card p {
@@ -447,7 +447,7 @@ color: transparent;
 .our-work {
   text-align: center;
   padding: 4rem 2rem;
-  background: #fff;
+  background: #000;
 }
 
 .work-title {
@@ -474,7 +474,7 @@ color: transparent;
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   opacity: 0;
   transform: translateY(30px);
@@ -536,9 +536,7 @@ color: transparent;
   overflow: hidden;
   white-space: nowrap;
   padding: 1rem 0;
-  background: #fff; /* Change if you want */
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  background: #000; 
 }
 
 .logo-track {
@@ -566,4 +564,228 @@ color: transparent;
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+.about-section {
+  background: #000;
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 8px;
+ box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18), 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.right {
+  flex: 2;
+  min-width: 280px;
+  color: #888;
+}
+
+/* Headings */
+h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #666;
+}
+
+/* Paragraphs */
+p {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background-color: #08979d;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: 100%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: fit-content;
+  }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000; /* Black background for the footer */
+    padding: 20px 0;
+    border-top: 1px solid #111; /* Light gray border at the top */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between logo, nav, and social icons */
+    align-items: center; /* Vertically center the content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+.footer-content .logo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-nav, .social-icons, .footer-bottom-nav {
+    display: flex;
+    gap: 20px; /* Space between each list item */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a, .footer-bottom-nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-nav a:hover, .footer-bottom-nav a:hover {
+    color: #444; /* Add hover effect for links */
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.social-icons li a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+  color: #00c896; /* Green hover color */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0; /* Center align and space above */
+    padding: 0 20px; /* Add padding on the sides */
+    border-top: 1px solid #ddd; /* Light gray border on top */
+    padding-top: 10px; /* Add padding on top after the border */
+    font-size: 0.9em; /* Slightly smaller text for the bottom section */
+    color: #fff;
+}
+
+.footer-bottom-nav {
+    gap: 15px; /* Smaller gap for the bottom nav links */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column; /* Stack footer items vertically */
+        text-align: center; /* Center text */
+    }
+
+    .footer-nav, .social-icons, .footer-bottom-nav {
+        flex-direction: column; /* Stack items vertically */
+        gap: 8px; /* Reduced space between footer items */
+    }
+
+    .footer-bottom-nav {
+        margin-top: 15px; /* Add space above bottom navigation */
+    }
+}
+
+.contact-section {
+  background-color: #000;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Georgia', serif; /* elegant serif font */
+  color: #fff;
+}
+
+.contact-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px; /* space between text and lines */
+  font-size: 45px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none; /* removes underline */
+}
+
+.contact-link span {
+  flex: 3;
+  height: 1px;
+  background-color: #777;
+  display: inline-block;
+  min-width: 100px; /* ensures the line is visible */
+}
+
+.contact-link:hover {
+  color: #666;
+}
+
+.contact-link:hover span {
+  background-color: #666;
 }
