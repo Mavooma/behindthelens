@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
-    <link rel="stylesheet" href="about.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Our Work</title>
+    <link rel="stylesheet" href="ourwork.css">
 </head>
 <body>
-    <nav>
+        <nav>
       <a href="#home" class="navbar-brand"><em>Behind The Lens</em></a>
       <button class="navbar-toggle" aria-label="Toggle Menu">
     &#9776;
@@ -43,65 +38,50 @@
   </ul>
     </nav>
 
-<!-- About Section -->
-  <section class="about-section">
-    <div class="about-image">
-      <img src="images/BTS.png" alt="About Us">
-    </div>
-    <div class="about-text">
-      <h3>About Us</h3>
-      <h2>We Always Make The Best</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id odio placerat, convallis neque quis, interdum leo. Duis ut varius augue.</p>
-      <button>Contact Us</button>
-    </div>
-  </section>
+    <!-- Our Work Hero Section -->
+<section id="our-work-hero">
+  <div class="our-work-container">
+    <h2>Our Work</h2>
+    <p>
+      A glimpse into the stories we’ve captured. From weddings to lifestyle
+      shoots, each project reflects our passion for creating timeless
+      memories through photography and videography.
+    </p>
+  </div>
+</section>
 
-  <!-- Vision & Mission -->
-  <section class="vision-mission">
-    <div>
-      <h3>Our Vision</h3>
-      <p>To be the leading creative studio that captures timeless memories and turns them into meaningful stories through photography and videography.</p>
-    </div>
-    <div>
-      <h3>Our Mission</h3>
-      <p>To deliver high-quality photography, videography, and custom photo albums that reflect our clients’ unique journeys and emotions with excellence.</p>
-    </div>
-  </section>
+        <!-- Portfolio -->
+    <section id="portfolio">
+      <div class="portfolio-tabs">
+        <button class="tab-button" data-tab="photography">
+          Photography
+        </button>
+        <button class="tab-button" data-tab="videography">Videography</button>
+        <button class="tab-button" data-tab="photo-albums">
+          Photo Albums
+        </button>
+      </div>
 
-  <!-- Hire Us Section -->
-  <section class="hire-section">
-    <h2>We Are Always Ready To Take A Perfect Shot</h2>
-    <button>Get Started</button>
-  </section>
+      <div class="portfolio-slider" id="slider">
+        <div class="slider-item">
+          <h3>Adidas</h3>
+          <img src="images/Adidas.jpg" alt="Brand Collaboration1" />
+          <p>Short description here.</p>
+        </div>
+        <div class="slider-item">
+          <h3>Sprite</h3>
+          <img src="images/Sprite.jpg" alt="Brand Collaboration2" />
+          <p>Short description here.</p>
+        </div>
+        <div class="slider-item">
+          <h3>Kylie Cosmetics</h3>
+          <img src="images/Kylie.jpg" alt="Brand Collaboration3" />
+          <p>Short description here.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Meet the Team -->
-  <section class="team-section">
-    <h2>Meet Our Team</h2>
-    <div class="team-carousel">
-      <div class="team-member">
-        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Team Member">
-        <h4>John Doe</h4>
-        <p>Lead Photographer</p>
-      </div>
-      <div class="team-member">
-        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Team Member">
-        <h4>Jane Smith</h4>
-        <p>Videographer</p>
-      </div>
-      <div class="team-member">
-        <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" alt="Team Member">
-        <h4>Michael Lee</h4>
-        <p>Creative Director</p>
-      </div>
-      <div class="team-member">
-        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Team Member">
-        <h4>Sara Khan</h4>
-        <p>Photo Editor</p>
-      </div>
-    </div>
-  </section>
-
-    <footer class="footer">
+      <footer class="footer">
         <div class="footer-content">
             <div class="logo"><em>Behind The Lens</em></div>
                 <ul class="footer-nav">
@@ -144,6 +124,6 @@
             </ul>
         </div>
     </footer>
-
+    
 </body>
 </html>
