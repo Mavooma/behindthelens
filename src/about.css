@@ -174,14 +174,6 @@ nav ul li.dropdown:hover .dropdown-menu {
       color: #ccc;
       line-height: 1.7;
     }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      color: #fff;
-    }
-
     section {
       padding: 60px 10%;
     }
@@ -203,18 +195,21 @@ nav ul li.dropdown:hover .dropdown-menu {
       align-items: stretch;
       position: relative;
       overflow: hidden;
-      margin-bottom: 80px;
+      margin-bottom: 40px;
     }
 
     .about-image {
       flex: 1;
     }
 
-    .about-image img {
-      width: 80%;
-      height: 100%;
-      object-fit: cover;
-    }
+.about-image img {
+  width: 70%;       /* smaller width */
+  height: auto;     /* keeps natural aspect ratio */
+  max-width: 400px; /* optional: put a cap so it never gets too big */
+  object-fit: cover;
+  display: block;   /* removes any inline spacing */
+  margin: 0 auto;   /* centers it if inside flex */
+}
 
     .about-text {
       flex: 1;

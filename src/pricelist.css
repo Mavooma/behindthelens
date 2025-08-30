@@ -159,238 +159,198 @@ nav ul li.dropdown:hover .dropdown-menu {
     }
 }
 
-/* Our Work Hero */
-.our-work-section {
-  display: flex;
-  align-items: stretch;
-  position: relative;
-  overflow: hidden;
-      margin-bottom: 40px;
-    }
-
-.our-work-image {
-  flex: 1;
-}
-
-.our-work-image img {
-  width: 70%;       /* smaller width */
-  height: auto;     /* keeps natural aspect ratio */
-  max-width: 400px; /* optional: put a cap so it never gets too big */
-  object-fit: cover;
-  display: block;   /* removes any inline spacing */
-  margin: 0 auto;   /* centers it if inside flex */
-}
-
-    .our-work-text {
-      flex: 1;
-      background: #111;
-      padding: 90px 40px;
-      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .our-work-text h3 {
-      font-size: 1.2rem;
-      color: #aaa;
-      margin-bottom: 10px;
-    }
-
-    .our-work-text h2 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-
-/* Portfolio */
-#portfolio {
-    padding: 5rem 5%;
-    background-color: #000;
-}
-
-.portfolio-tabs {
-    text-align: center;
-    margin-bottom: 1rem;
-    background-color: #000;
-}
-
-.tab-button {
-    padding: 0.8rem 1.5rem;
-    background: #08979d;
-    border: 1px solid #444;
-    font-size: 1rem;
-    color: white;
-    border-radius: 50px;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Hover only */
-.tab-button:hover {
-    background: #666; /* gray */
-    border-color: #666;
-}
-
-/* Active stays blue */
-.tab-button.active {
-    background: #08979d;
-    border-color: #666;
-    color: #fff;
-}
-
-.portfolio-slider {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 1rem;
-}
-
-.portfolio-slider::-webkit-scrollbar {
-    display: none; /* hides scrollbar for a cleaner look */
-}
-
-.slider-item {
-    flex: 0 0 300px;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.embed-responsive {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(106, 76, 147, 0.2); /* soft shadow */
-}
-
-.box {
-  background: #fdfbff; /* soft card background */
-  border-radius: 20px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(106, 76, 147, 0.3);
-}
-
-/* General Section */
-#testimonial {
+/* Section General */
+#pricing {
   background: #000;
   color: #fff;
-  padding: 4rem 8%;
   font-family: 'Poppins', sans-serif;
+  padding: 4rem 8%;
+  text-align: center;
 }
 
 /* Header */
-.testimonial-header {
-  text-align: center;
+.pricing-header {
   margin-bottom: 2rem;
 }
 
-.testimonial-header h2 {
+.pricing-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
 }
 
-.testimonial-header .breadcrumb {
+.breadcrumb {
   color: #bbb;
   margin-top: 0.5rem;
 }
 
 /* Intro */
-.testimonial-intro {
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
+.pricing-intro {
   margin-bottom: 3rem;
 }
 
-.testimonial-intro h3 {
+.pricing-intro h3 {
   font-size: 2rem;
-  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.testimonial-intro p {
+.pricing-intro p {
   color: #ccc;
-  max-width: 600px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* Grid */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Pricing Cards */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 
-/* Card */
-.testimonial-card {
+.pricing-card {
   background: #111;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #333;
-  position: relative;
-  transition: transform 0.3s;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
 }
 
-.testimonial-card:hover {
+.pricing-card:hover {
   transform: translateY(-5px);
 }
 
-.stars {
-  color: gold;
+.pricing-card h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
-.testimonial-card p {
+.pricing-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.pricing-card h2 span {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.pricing-card p {
   color: #aaa;
   margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
 }
 
-.client {
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.pricing-card ul li {
+  margin: 0.5rem 0;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.pricing-card button {
+  background: #2B78B3;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pricing-card button:hover {
+  background: #d97e15;
+}
+
+/* Reviews */
+.reviews-section {
+  margin: 5rem 0;
+}
+
+.reviews-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.learn-more {
+  background: #2B78B3;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.review-images {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
-.client img {
-  width: 50px;
-  height: 50px;
+.review-images img {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid #111;
 }
 
-.client h4 {
-  margin: 0;
-  font-size: 1rem;
+/* Call to Action */
+.cta {
+  position: relative;
+  background: url("images/camera.jpg") no-repeat center center/cover;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.cta-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-overlay h4 {
+  font-size: 1.2rem;
+  color: #2B78B3;
+  margin-bottom: 1rem;
+}
+
+.cta-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-overlay button {
+  background: #2B78B3;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  color: #fff;
   font-weight: 600;
+  cursor: pointer;
 }
 
-.client span {
-  color: #777;
-  font-size: 0.85rem;
-}
-
-/* Quote Icon */
-.quote {
-  font-size: 3rem;
-  color: #444;
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
+.cta-overlay button:hover {
+  background: #d97e15;
 }
 
 /* Footer Styles */

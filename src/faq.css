@@ -159,20 +159,20 @@ nav ul li.dropdown:hover .dropdown-menu {
     }
 }
 
-/* Our Work Hero */
-.our-work-section {
-  display: flex;
-  align-items: stretch;
-  position: relative;
-  overflow: hidden;
+    /* --- Slanted FAQ Section --- */
+    .faq-section {
+      display: flex;
+      align-items: stretch;
+      position: relative;
+      overflow: hidden;
       margin-bottom: 40px;
     }
 
-.our-work-image {
-  flex: 1;
-}
+    .faq-image {
+      flex: 1;
+    }
 
-.our-work-image img {
+.faq-image img {
   width: 70%;       /* smaller width */
   height: auto;     /* keeps natural aspect ratio */
   max-width: 400px; /* optional: put a cap so it never gets too big */
@@ -181,7 +181,7 @@ nav ul li.dropdown:hover .dropdown-menu {
   margin: 0 auto;   /* centers it if inside flex */
 }
 
-    .our-work-text {
+    .faq-text {
       flex: 1;
       background: #111;
       padding: 90px 40px;
@@ -191,209 +191,102 @@ nav ul li.dropdown:hover .dropdown-menu {
       justify-content: center;
     }
 
-    .our-work-text h3 {
+    .faq-text h3 {
       font-size: 1.2rem;
       color: #aaa;
       margin-bottom: 10px;
     }
 
-    .our-work-text h2 {
+    .faq-text h2 {
       font-size: 1.5rem;
       margin-bottom: 20px;
     }
 
-/* Portfolio */
-#portfolio {
-    padding: 5rem 5%;
-    background-color: #000;
-}
-
-.portfolio-tabs {
-    text-align: center;
-    margin-bottom: 1rem;
-    background-color: #000;
-}
-
-.tab-button {
-    padding: 0.8rem 1.5rem;
-    background: #08979d;
-    border: 1px solid #444;
-    font-size: 1rem;
-    color: white;
-    border-radius: 50px;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Hover only */
-.tab-button:hover {
-    background: #666; /* gray */
-    border-color: #666;
-}
-
-/* Active stays blue */
-.tab-button.active {
-    background: #08979d;
-    border-color: #666;
-    color: #fff;
-}
-
-.portfolio-slider {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 1rem;
-}
-
-.portfolio-slider::-webkit-scrollbar {
-    display: none; /* hides scrollbar for a cleaner look */
-}
-
-.slider-item {
-    flex: 0 0 300px;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.embed-responsive {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(106, 76, 147, 0.2); /* soft shadow */
-}
-
-.box {
-  background: #fdfbff; /* soft card background */
-  border-radius: 20px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(106, 76, 147, 0.3);
-}
-
-/* General Section */
-#testimonial {
-  background: #000;
+/* FAQ Section */
+.faq-section {
+  padding: 4rem 5%;
+  background: #000; /* dark background */
   color: #fff;
-  padding: 4rem 8%;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Header */
-.testimonial-header {
   text-align: center;
-  margin-bottom: 2rem;
 }
 
-.testimonial-header h2 {
+.faq-section h1 {
   font-size: 2.5rem;
-  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #08979d;
 }
 
-.testimonial-header .breadcrumb {
-  color: #bbb;
-  margin-top: 0.5rem;
-}
-
-/* Intro */
-.testimonial-intro {
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Question button */
+.faq-question {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.testimonial-intro h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.testimonial-intro p {
-  color: #ccc;
-  max-width: 600px;
-}
-
-/* Grid */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-/* Card */
-.testimonial-card {
-  background: #111;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #333;
-  position: relative;
-  transition: transform 0.3s;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-}
-
-.stars {
-  color: gold;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.testimonial-card p {
-  color: #aaa;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.client {
-  display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
-.client img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
+.faq-arrow {
+  font-size: 1.5rem;
+  color: #08979d;
+  transition: transform 0.3s ease;
 }
 
-.client h4 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
+/* Answer content */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #1a1a1a;
+  padding: 0 1.5rem;
+  transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
-.client span {
-  color: #777;
-  font-size: 0.85rem;
+.faq-answer p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #ddd;
 }
 
-/* Quote Icon */
-.quote {
-  font-size: 3rem;
-  color: #444;
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
+/* Active (when expanded) */
+.faq-item.active .faq-answer {
+  max-height: 500px; /* large enough for long answers */
+  padding: 1rem 1.5rem;
 }
 
-/* Footer Styles */
+.faq-item.active .faq-arrow {
+  transform: rotate(45deg); /* changes + to x */
+  color: #fff;
+}
+
+        /* Footer Styles */
 .footer {
     background-color: #000; /* Black background for the footer */
     padding: 20px 0;
