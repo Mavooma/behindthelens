@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
-    <link rel="stylesheet" href="about.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <nav>
+        <nav>
       <a href="#home" class="navbar-brand"><em>Behind The Lens</em></a>
       <button class="navbar-toggle" aria-label="Toggle Menu">
     &#9776;
@@ -43,61 +38,43 @@
   </ul>
     </nav>
 
-<!-- About Section -->
-  <section class="about-section">
-    <div class="about-image">
-      <img src="images/BTS.png" alt="About Us">
-    </div>
-    <div class="about-text">
-      <h3>About Us</h3>
-      <h2>We Always Make The Best</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id odio placerat, convallis neque quis, interdum leo. Duis ut varius augue.</p>
-      <button>Contact Us</button>
-    </div>
-  </section>
+    <section class="contact-section">
+    <h1>Contact Us Page</h1>
 
-  <!-- Vision & Mission -->
-  <section class="vision-mission">
-    <div>
-      <h3>Our Vision</h3>
-      <p>To be the leading creative studio that captures timeless memories and turns them into meaningful stories through photography and videography.</p>
-    </div>
-    <div>
-      <h3>Our Mission</h3>
-      <p>To deliver high-quality photography, videography, and custom photo albums that reflect our clients’ unique journeys and emotions with excellence.</p>
-    </div>
-  </section>
+    <div class="contact-container">
+      <!-- Left form -->
+      <div class="contact-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name">
 
-  <!-- Hire Us Section -->
-  <section class="hire-section">
-    <h2>We Are Always Ready To Take A Perfect Shot</h2>
-    <button>Get Started</button>
-  </section>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Enter your email">
 
-  <!-- Meet the Team -->
-  <section class="team-section">
-    <h2>Meet Our Team</h2>
-    <div class="team-carousel">
-      <div class="team-member">
-        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Team Member">
-        <h4>John Doe</h4>
-        <p>Lead Photographer</p>
+        <label for="message">Message</label>
+        <textarea id="message" rows="3" placeholder="Type your message"></textarea>
+
+        <button>Contact Us</button>
       </div>
-      <div class="team-member">
-        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Team Member">
-        <h4>Jane Smith</h4>
-        <p>Videographer</p>
+
+      <!-- Right info -->
+      <div class="contact-info">
+        <strong>Contact</strong>
+        <p>hi@fashion.com</p>
+
+        <strong>Based in</strong>
+        <p>Margate, South Coast</p>
+
+        <div class="socials">
+          <a href="#">🌐</a>
+          <a href="#">📸</a>
+          <a href="#">🐦</a>
+        </div>
       </div>
-      <div class="team-member">
-        <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" alt="Team Member">
-        <h4>Michael Lee</h4>
-        <p>Creative Director</p>
-      </div>
-      <div class="team-member">
-        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Team Member">
-        <h4>Sara Khan</h4>
-        <p>Photo Editor</p>
-      </div>
+    </div>
+
+    <!-- Bottom image -->
+    <div class="contact-image">
+      <img src="images/BTS.png" alt="Contact Us Image">
     </div>
   </section>
 
@@ -144,8 +121,6 @@
             </ul>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 
 </body>
 </html>
