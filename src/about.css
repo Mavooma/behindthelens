@@ -213,7 +213,6 @@ nav ul li.dropdown:hover .dropdown-menu {
 
     .about-text {
       flex: 1;
-      background: #111;
       padding: 60px 40px;
       clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
       display: flex;
@@ -304,6 +303,46 @@ nav ul li.dropdown:hover .dropdown-menu {
       font-weight: bold;
     }
 
+    .founder-section {
+  padding: 60px 20%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.founder-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.founder-photo {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #08979d;
+}
+
+.founder-info {
+  max-width: 600px;
+  text-align: left;
+}
+
+.founder-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #08979d;
+}
+
+.founder-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
     /* Team Section */
     .team-section {
       margin-top: 60px;
@@ -335,6 +374,12 @@ nav ul li.dropdown:hover .dropdown-menu {
       width: 100%;
       border-radius: 12px;
       margin-bottom: 15px;
+    }
+
+    .team-member h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: #08979d;
     }
 
     .team-member h4 {

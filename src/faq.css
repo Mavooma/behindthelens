@@ -159,6 +159,36 @@ nav ul li.dropdown:hover .dropdown-menu {
     }
 }
 
+/* Section Base */
+    section {
+      padding: 60px 10%;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    p {
+      color: #ccc;
+      line-height: 1.7;
+    }
+    section {
+      padding: 60px 10%;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    p {
+      color: #ccc;
+      line-height: 1.7;
+    }
+
     /* --- Slanted FAQ Section --- */
     .faq-section {
       display: flex;
@@ -181,15 +211,15 @@ nav ul li.dropdown:hover .dropdown-menu {
   margin: 0 auto;   /* centers it if inside flex */
 }
 
-    .faq-text {
-      flex: 1;
-      background: #111;
-      padding: 90px 40px;
-      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.faq-text {
+  flex: 1;
+  padding: 50px 40px;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+}
 
     .faq-text h3 {
       font-size: 1.2rem;
@@ -359,6 +389,20 @@ nav ul li.dropdown:hover .dropdown-menu {
 .footer-bottom-nav {
     gap: 15px; /* Smaller gap for the bottom nav links */
 }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .faq-section {
+        flex-direction: column;
+      }
+      .faq-text {
+        clip-path: none;
+        border-radius: 0 0 15px 15px;
+      }
+      .vision-mission {
+        flex-direction: column;
+      }
+    }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
