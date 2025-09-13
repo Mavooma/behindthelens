@@ -169,31 +169,24 @@ nav ul li.dropdown:hover .dropdown-menu {
   gap: 2rem;
 }
 
-/* Left content */
-.hero-text {
-  flex: 1;
-  opacity: 0;
-  transform: translateX(-30px);   /* FIXED */
-  animation: fadeSlideIn 1s forwards 0.2s;
-}
-
 .hero-text h1 {
-  font-family: "Cinzel", serif;
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
   font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05px;
 
-  /* Outlined effect */
-color: transparent;
--webkit-text-stroke: 2px #b58a4b; /* gold outline */
+  /* Remove outline effect */
+  color: #b58a4b;  /* solid gold color */
+  -webkit-text-stroke: 0; /* remove stroke */
 }
 
-/* White outline for the emphasized word */
+/* Optional: styling for emphasized word without outline */
 .hero-text h1 em {
   font-style: normal;
-  -webkit-text-stroke: 2px #ffffff; /* white outline */
+  color: #ffffff; /* solid white */
+  -webkit-text-stroke: 0; /* remove stroke */
 }
 
 /* Center content within left column */

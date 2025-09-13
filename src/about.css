@@ -195,7 +195,7 @@ nav ul li.dropdown:hover .dropdown-menu {
       align-items: stretch;
       position: relative;
       overflow: hidden;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     .about-image {
@@ -268,9 +268,9 @@ nav ul li.dropdown:hover .dropdown-menu {
     .hire-section {
       background: url('https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center/cover;
       text-align: center;
-      padding: 70px 20px;
+      padding: 60px 10px;
       border-radius: 15px;
-      margin-top: 40px;
+      margin-top: 60px;
       position: relative;
     }
 
@@ -304,7 +304,8 @@ nav ul li.dropdown:hover .dropdown-menu {
     }
 
     .founder-section {
-  padding: 60px 20%;
+  padding: 60px 10%;
+  margin-bottom: 40px;
   background: #000;
   color: #fff;
   text-align: center;
@@ -345,15 +346,15 @@ nav ul li.dropdown:hover .dropdown-menu {
 
     /* Team Section */
     .team-section {
-      margin-top: 60px;
       text-align: center;
+      padding: 0 10%;
     }
 
     .team-carousel {
       display: flex;
       overflow-x: auto;
       gap: 20px;
-      padding: 20px;
+      padding: 20px 20px 20px 60px;
       scrollbar-width: none;
     }
 
