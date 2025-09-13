@@ -1,126 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "PRcs5nP_LCAD3OLkt",
+      });
+   })();
+</script>
+  <script src="contact.js" defer></script>
 </head>
 <body>
-        <nav>
-      <a href="#home" class="navbar-brand"><em>Behind The Lens</em></a>
-      <button class="navbar-toggle" aria-label="Toggle Menu">
-    &#9776;
-      </button>
-      <ul class="navbar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <!-- Services Dropdown -->
-    <li class="dropdown">
-      <a href="#">Services ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="ourwork.html">Our Work</a></li>
-        <li><a href="pricelist.html">Price List</a></li>
-      </ul>
-    </li>
+  <nav>
+    <a href="#home" class="navbar-brand"><em>Behind The Lens</em></a>
+    <button class="navbar-toggle" aria-label="Toggle Menu">&#9776;</button>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="ourwork.html">Our Work</a></li>
+          <li><a href="pricelist.html">Price List</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Recognition ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Awards & Press</a></li>
+        </ul>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Recognition Dropdown -->
-    <li class="dropdown">
-      <a href="#">Recognition ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">Awards & Press</a></li>
-      </ul>
-    </li>
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="contact-wrapper">
+      <div class="contact-container">
+        <!-- Contact Form -->
+<div class="contact-form">
+  <form id="contactForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-    </nav>
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-    <section class="contact-section">
-    <h1>Contact Us Page</h1>
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Subject" required>
 
-    <div class="contact-container">
-      <!-- Left form -->
-      <div class="contact-form">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your full name">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="3" placeholder="Type your message" required></textarea>
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Enter your email">
+    <button type="submit" class="submit-btn">Send Message</button>
 
-        <label for="message">Message</label>
-        <textarea id="message" rows="3" placeholder="Type your message"></textarea>
+    <!-- ✅ Success Message (hidden by default) -->
+    <p id="contactSuccess" style="display: none; color: #2B78B3; margin-top: 10px;">
+      ✅ Your message has been sent successfully!
+    </p>
 
-        <button>Contact Us</button>
-      </div>
+    <!-- ❌ Error Message (hidden by default) -->
+    <p id="contactError" style="display: none; color: #e85c0d; margin-top: 10px;">
+      ❌ Failed to send message. Please try again.
+    </p>
+  </form>
+</div>
 
-      <!-- Right info -->
-      <div class="contact-info">
-        <strong>Contact</strong>
-        <p>hi@fashion.com</p>
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <strong>Email</strong>
+          <p>Info@behindthelenssa.com</p>
 
-        <strong>Based in</strong>
-        <p>Margate, South Coast</p>
+          <strong>Location</strong>
+          <p>Margate, South Coast</p>
 
-        <div class="socials">
-          <a href="#">🌐</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.instagram.com/behindthelens_pty_ltd_?igsh=cnZ4MG1nN2FlaGtm" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/share/1AaaB2PzFN/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Bottom image -->
-    <div class="contact-image">
-      <img src="images/BTS.png" alt="Contact Us Image">
+      <!-- Decorative Image -->
+      <div class="contact-image">
+        <img src="images/BTS.png" alt="Contact Us Image">
+      </div>
+
+      <!-- Floating Message -->
+      <div id="formMessage"></div>
     </div>
   </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="logo"><em>Behind The Lens</em></div>
-                <ul class="footer-nav">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#work">Our Work</a></li>
-                    <li><a href="#pricing">Price List</a></li>
-                    <li><a href="#recognition">Recognition</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="logo"><em>Behind The Lens</em></div>
+      <ul class="footer-nav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#pricing">Price List</a></li>
+        <li><a href="#recognition">Recognition</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.instagram.com/behindthelens_pty_ltd_?igsh=cnZ4MG1nN2FlaGtm" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/share/1AaaB2PzFN/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-                <ul class="social-icons">
-                    <li>
-    <a href="https://www.instagram.com/behindthelens_pty_ltd_?igsh=cnZ4MG1nN2FlaGtm" target="_blank" aria-label="Instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.facebook.com/share/1AaaB2PzFN/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
-      <i class="fa-brands fa-facebook"></i>
-    </a>
-  </li>
-                </ul>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Behind The Lens. All rights reserved.</p>
-            <ul class="footer-bottom-nav">
-                <li>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="terms-and-conditions.html">Terms and Conditions</a>
-                </li>
-                <li>
-                    <a href="cookie-policy.html">Cookie Policy</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
+    <div class="footer-bottom">
+      <p>&copy; 2024 Behind The Lens. All rights reserved.</p>
+      <ul class="footer-bottom-nav">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
