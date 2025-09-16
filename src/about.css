@@ -221,8 +221,8 @@ nav ul li.dropdown:hover .dropdown-menu {
     }
 
     .about-text h3 {
-      font-size: 1.2rem;
-      color: #aaa;
+      font-size: 1.5rem;
+      color: #08979d;
       margin-bottom: 10px;
     }
 
@@ -232,9 +232,10 @@ nav ul li.dropdown:hover .dropdown-menu {
     }
 
     .about-text button {
-      background: #fff;
-      color: #000;
-      padding: 10px 20px;
+      background: #08979d;
+      font-size: 1rem;
+      color: white;
+      padding: 15px 25px;
       border: none;
       border-radius: 25px;
       cursor: pointer;
@@ -261,7 +262,8 @@ nav ul li.dropdown:hover .dropdown-menu {
 
     .vision-mission h3 {
       margin-bottom: 15px;
-      color: #fff;
+      color: #08979d;
+      font-size: 1.5rem;
     }
 
     /* Hire Us Section */
@@ -319,6 +321,13 @@ nav ul li.dropdown:hover .dropdown-menu {
   flex-wrap: wrap;
 }
 
+.founder-section h2 {
+  font-size: 2.5rem;     /* adjust size as needed */
+  color: #08979d;      /* your desired blue */
+  margin-bottom: 2rem; /* spacing below the heading */
+  text-align: center;  /* center it */
+}
+
 .founder-photo {
   width: 250px;
   height: 250px;
@@ -335,7 +344,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .founder-info h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #08979d;
+  color: #aaa;
 }
 
 .founder-info p {
@@ -377,15 +386,16 @@ nav ul li.dropdown:hover .dropdown-menu {
       margin-bottom: 15px;
     }
 
-    .team-member h2 {
-      font-size: 1.5rem;
-      margin-bottom: 5px;
-      color: #08979d;
-    }
+.team-section h2 {
+  font-size: 2.5rem; /* adjust size as needed */
+  color: #08979d;  /* the blue you want */
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
     .team-member h4 {
       margin-bottom: 5px;
-      color: #fff;
+      color: #08979d;
     }
 
     .team-member p {
@@ -424,9 +434,17 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .footer-content .logo {
-    font-family: "Playfair Display", serif;
-    font-size: 1.5em;
-    font-weight: bold;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;     /* centers it horizontally */
+  margin-top: 10px;       /* optional spacing */
+}
+
+.footer-content .logo a {
+  color: inherit;         /* use same color as parent */
+  text-decoration: none;  /* remove underline */
+  display: inline-block;  /* helps with centering */
 }
 
 .footer-nav, .social-icons, .footer-bottom-nav {
