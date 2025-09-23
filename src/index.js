@@ -22,6 +22,21 @@ function checkCards() {
   });
 }
 
+const buttons = document.querySelectorAll(".tab-button");
+  const grids = document.querySelectorAll(".portfolio-grid");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Remove active states
+      buttons.forEach((b) => b.classList.remove("active"));
+      grids.forEach((grid) => grid.classList.remove("active"));
+
+      // Add active to clicked
+      btn.classList.add("active");
+      document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+  });
+
 // FAQ toggle
 document.addEventListener("DOMContentLoaded", () => {
   const faqs = document.querySelectorAll(".faq-question");

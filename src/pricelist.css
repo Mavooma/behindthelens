@@ -176,11 +176,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .pricing-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
-}
-
-.breadcrumb {
-  color: #bbb;
-  margin-top: 0.5rem;
+  color: #08979d;
 }
 
 /* Intro */
@@ -191,10 +187,11 @@ nav ul li.dropdown:hover .dropdown-menu {
 .pricing-intro h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #08979d
 }
 
 .pricing-intro p {
-  color: #ccc;
+  color: #fff;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -225,6 +222,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .pricing-card h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: #08979d
 }
 
 .pricing-card h2 {
@@ -255,62 +253,11 @@ nav ul li.dropdown:hover .dropdown-menu {
   font-size: 0.9rem;
 }
 
-.pricing-card button {
-  background: #2B78B3;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.pricing-card button:hover {
-  background: #d97e15;
-}
-
-/* Reviews */
-.reviews-section {
-  margin: 5rem 0;
-}
-
-.reviews-section h3 {
+.albums-section h3 {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.stars {
-  color: gold;
-  font-size: 1.3rem;
-  margin: 1rem 0;
-}
-
-.learn-more {
-  background: #2B78B3;
-  border: none;
-  padding: 0.7rem 1.3rem;
-  border-radius: 50px;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  margin-bottom: 2rem;
-}
-
-.review-images {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.review-images img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #111;
+  color: #08979d; 
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Call to Action */
@@ -328,9 +275,9 @@ nav ul li.dropdown:hover .dropdown-menu {
   text-align: center;
 }
 
-.cta-overlay h4 {
-  font-size: 1.2rem;
-  color: #2B78B3;
+.cta-overlay h3 {
+  font-size: 1.5rem;
+  color: #08979d;
   margin-bottom: 1rem;
 }
 
@@ -340,7 +287,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .cta-overlay button {
-  background: #2B78B3;
+  background: #08979d;
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
@@ -350,7 +297,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .cta-overlay button:hover {
-  background: #d97e15;
+  background: #444;
 }
 
 /* Footer Styles */
