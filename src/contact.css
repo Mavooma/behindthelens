@@ -164,7 +164,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
-    color: #2B78B3;
+    color: #08979d;
 }
 
 /* Wrapper for contact + softbox */
@@ -196,7 +196,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     display: block;
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
-    color: #2B78B3;
+    color: #08979d;
 }
 
 .contact-form input,
@@ -246,7 +246,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .contact-info strong {
     font-weight: bold;
     font-size: 1rem;
-    color: #2B78B3;
+    color: #08979d;
 }
 
 .social-icons {
@@ -258,7 +258,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .social-icons li a {
-    color: #2B78B3;
+    color: #08979d;
     font-size: 20px;
     transition: color 0.3s ease;
 }
@@ -383,13 +383,13 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 #formMessage.success {
-    background-color: #e85c0d;
-    border: 2px solid white;
+    background-color: #08979d;
+    border: 2px solid #444;
 }
 
 #formMessage.error {
-    background-color: #800080;
-    border: 2px solid #ff7eb6;
+    background-color: #08979d;
+    border: 2px solid #444;
 }
 
 #formMessage.show {
@@ -475,7 +475,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .social-icons li a:hover {
-    color: #00c896;
+    color: #08979d;
 }
 
 .footer-bottom {
@@ -521,11 +521,11 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 #contactSuccess {
-    color: #2B78B3;
+    color: #08979d;
 }
 
 #contactError {
-    color: #e85c0d;
+    color: #08979d;
 }
 
 #contactSuccess.show,
