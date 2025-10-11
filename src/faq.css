@@ -223,7 +223,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 
     .faq-text h3 {
       font-size: 1.5rem;
-      color: #08979d;
+      color: #fff;
       margin-bottom: 10px;
     }
 
@@ -243,7 +243,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .faq-section h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #08979d;
+  color: #fff;
 }
 
 .faq-container {
@@ -285,7 +285,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .faq-arrow {
   font-size: 1.5rem;
-  color: #08979d;
+  color: #fff;
   transition: transform 0.3s ease;
 }
 
@@ -370,7 +370,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .social-icons li a:hover {
-  color: #00c896; /* Green hover color */
+  color: #444; 
 }
 
 .footer-bottom {

@@ -164,7 +164,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
-    color: #08979d;
+    color: #fff;
 }
 
 /* Wrapper for contact + softbox */
@@ -196,7 +196,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     display: block;
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
-    color: #08979d;
+    color: #fff;
 }
 
 .contact-form input,
@@ -246,7 +246,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .contact-info strong {
     font-weight: bold;
     font-size: 1rem;
-    color: #08979d;
+    color: #fff;
 }
 
 .social-icons {
@@ -258,7 +258,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .social-icons li a {
-    color: #08979d;
+    color: #fff;
     font-size: 20px;
     transition: color 0.3s ease;
 }
@@ -475,7 +475,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .social-icons li a:hover {
-    color: #08979d;
+    color: #444;;
 }
 
 .footer-bottom {

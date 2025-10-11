@@ -209,7 +209,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .hero-text p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  opacity: 0.8;
+  opacity: 1;
   color: #fff;
 }
 
@@ -221,6 +221,32 @@ nav ul li.dropdown:hover .dropdown-menu {
   grid-auto-rows: 150px;
   grid-gap: 1rem;
   position: relative;
+}
+
+.btn {
+  background-color: #fff; 
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background-color: #444; /* darker blue */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  background-color: #444; /* even darker for click */
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .hero-images img {
@@ -286,7 +312,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .services-section h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #08979d;
+  color: #fff;
 }
 
 .services-section p {
@@ -312,7 +338,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .service-card i {
   font-size: 3rem;
-  color: #08979d;
+  color: #fff;
   margin-bottom: 1rem;
 }
 
@@ -337,7 +363,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 section.our-work h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #08979d !important;
+  color: #fff !important;
 }
 
 .work-grid {
@@ -378,8 +404,8 @@ section.our-work h2 {
 .btn {
   display: inline-block;
   padding: 0.9rem 1.8rem;
-  background: #08979d;
-  color: #fff;
+  background: #fff;
+  color: black;
   border: none;
   border-radius: 50px;
   font-size: 1rem;
@@ -492,6 +518,21 @@ p {
   line-height: 1.7;
 }
 
+.about-content .left .btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #fff;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.about-content .left .btn:hover {
+  background: #444;
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
   .about-content {
@@ -577,7 +618,7 @@ p {
 }
 
 .social-icons li a:hover {
-  color: #00c896;
+  color: #444;
 }
 
 .footer-bottom {

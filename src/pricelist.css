@@ -176,7 +176,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .pricing-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #08979d;
+  color: #fff;
 }
 
 /* Intro */
@@ -187,7 +187,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .pricing-intro h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #08979d
+  color: #fff;
 }
 
 .pricing-intro p {
@@ -222,7 +222,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 .pricing-card h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #08979d
+  color: #fff;
 }
 
 .pricing-card h2 {
@@ -255,7 +255,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .albums-section h3 {
   font-size: 1.8rem;
-  color: #08979d; 
+  color: #444; 
   margin-bottom: 10px;
   text-align: center;
 }
@@ -277,7 +277,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .cta-overlay h3 {
   font-size: 1.5rem;
-  color: #08979d;
+  color: #fff;
   margin-bottom: 1rem;
 }
 
@@ -287,11 +287,11 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .cta-overlay button {
-  background: #08979d;
+  background: #fff;
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
-  color: #fff;
+  color: black;
   font-weight: 600;
   cursor: pointer;
 }
@@ -354,7 +354,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .social-icons li a:hover {
-  color: #00c896; /* Green hover color */
+  color: #444; /* Green hover color */
 }
 
 .footer-bottom {

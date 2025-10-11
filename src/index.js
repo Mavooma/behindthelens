@@ -1,8 +1,8 @@
 // Navbar toggle
-const toggleButton = document.querySelector(".navbar-toggle");
+const toggle = document.querySelector(".navbar-toggle");
 const menu = document.querySelector(".navbar-menu");
 
-toggleButton.addEventListener("click", () => {
+toggle.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
