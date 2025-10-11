@@ -694,3 +694,73 @@ p {
 .contact-link:hover span {
   background-color: #666;
 }
+
+/* Fade-in for the body */
+body {
+  animation: fadeInBody 1s ease-in forwards;
+  opacity: 0;
+}
+@keyframes fadeInBody {
+  to { opacity: 1; }
+}
+
+/* Navbar slide-down animation */
+nav {
+  animation: slideDown 1s ease forwards;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Smooth section reveals on scroll */
+section, .services-section, .our-work, .about-section, .contact-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible, 
+.services-section.visible, 
+.our-work.visible, 
+.about-section.visible, 
+.contact-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating subtle animation for hero text */
+.hero-text h1 {
+  animation: floatText 4s ease-in-out infinite;
+}
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Button pulse animation */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  animation: pulse 0.8s ease-in-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Floating logo animation (optional for footer or hero) */
+.footer-content .logo {
+  animation: floatLogo 6s ease-in-out infinite;
+}
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}

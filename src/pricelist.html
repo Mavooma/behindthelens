@@ -167,6 +167,20 @@ We offer flexible photography and videography packages tailored to your unique n
         </div>
     </footer>
 
+    <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  // Observe all pricing-related elements
+  document.querySelectorAll('#pricing, .pricing-header, .pricing-intro, .pricing-card, .cta')
+    .forEach((el) => observer.observe(el));
+</script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>

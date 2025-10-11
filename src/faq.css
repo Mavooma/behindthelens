@@ -420,3 +420,69 @@ nav ul li.dropdown:hover .dropdown-menu {
         margin-top: 15px; /* Add space above bottom navigation */
     }
 }
+
+/* === FADE & SLIDE ANIMATIONS === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Initial state for scroll animations --- */
+section,
+.faq-section,
+.footer,
+nav {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* --- When the element is visible --- */
+.show {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Navbar enters from top */
+nav.show {
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* FAQ items staggered */
+.faq-item {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.faq-item.show {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Footer fade in */
+.footer.show {
+  animation: fadeIn 1.2s ease forwards;
+}

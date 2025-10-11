@@ -56,5 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.toggle("active");
     });
   });
+
+  const sections = document.querySelectorAll("section, .services-section, .our-work, .about-section, .contact-section");
+  const revealOnScroll = () => {
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        section.classList.add("visible");
+      }
+    });
+  };
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
 });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.portfolio-grid, .portfolio-card').forEach((el) => {
+    observer.observe(el);
+  });
 

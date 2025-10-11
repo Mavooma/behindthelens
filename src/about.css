@@ -515,3 +515,100 @@ nav ul li.dropdown:hover .dropdown-menu {
         margin-top: 15px; /* Add space above bottom navigation */
     }
 }
+
+/* Fade-in body when page loads */
+body {
+  opacity: 0;
+  animation: fadeInBody 1s ease-in forwards;
+}
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navbar slide-down animation */
+nav {
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: slideDown 1s ease forwards;
+}
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade + slide reveal for each section */
+section, 
+.about-section,
+.team-section,
+.founder-section,
+.hire-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+section.visible,
+.about-section.visible,
+.team-section.visible,
+.founder-section.visible,
+.hire-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons pulse when hovered */
+button, 
+.about-text button,
+.hire-section button {
+  transition: transform 0.3s ease;
+}
+button:hover,
+.about-text button:hover,
+.hire-section button:hover {
+  animation: pulse 0.8s ease-in-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Floating logo animation (footer) */
+.footer-content .logo {
+  animation: floatLogo 6s ease-in-out infinite;
+}
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Smooth hover glow for links */
+nav ul li a:hover,
+.footer-nav a:hover,
+.footer-bottom-nav a:hover {
+  color: #888;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+/* Team members gentle hover scale */
+.team-member {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+}
+
+/* Fade in about image */
+.about-image img {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.about-image img.visible {
+  opacity: 1;
+  transform: scale(1);
+}

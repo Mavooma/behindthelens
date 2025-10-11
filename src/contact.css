@@ -540,3 +540,67 @@ nav ul li.dropdown:hover .dropdown-menu {
         opacity: 1;
     }
 }
+
+/* === FADE-IN AND SLIDE ANIMATIONS === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* === INITIAL STATE === */
+nav,
+.contact-section,
+.contact-form,
+.contact-info,
+.footer {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* === ANIMATED STATES === */
+nav.show {
+  animation: fadeInDown 1s ease forwards;
+}
+
+.contact-section.show {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contact-form.show {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.contact-info.show {
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+.footer.show {
+  animation: fadeIn 1.2s ease forwards;
+}
