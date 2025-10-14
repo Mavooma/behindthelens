@@ -167,23 +167,6 @@
         </div>
     </footer>
 
-<script>
-  const sections = document.querySelectorAll(
-    "section, .about-section, .team-section, .founder-section, .hire-section, .about-image img"
-  );
-
-  const revealOnScroll = () => {
-    sections.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        el.classList.add("visible");
-      }
-    });
-  };
-
-  window.addEventListener("scroll", revealOnScroll);
-  window.addEventListener("load", revealOnScroll);
-</script>
-
+    <script src="index.js"></script>
 </body>
 </html>

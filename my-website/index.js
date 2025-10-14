@@ -96,7 +96,7 @@ document.querySelectorAll(".portfolio-grid, .portfolio-card").forEach((el) => {
   observer.observe(el);
 });
 
-// 👇 Added script (without changing anything)
+// 👇 Added observer2 script (kept original code intact)
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -109,3 +109,20 @@ const observer2 = new IntersectionObserver((entries) => {
 document.querySelectorAll(
   'nav, section, .faq-section, .faq-item, .footer'
 ).forEach((el) => observer2.observe(el));
+
+// 👇 Added your new reveal-on-scroll code (without changing anything)
+const sections2 = document.querySelectorAll(
+  "section, .about-section, .team-section, .founder-section, .hire-section, .about-image img"
+);
+
+const revealOnScroll2 = () => {
+  sections2.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("visible");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll2);
+window.addEventListener("load", revealOnScroll2);
