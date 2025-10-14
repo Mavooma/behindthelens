@@ -293,8 +293,9 @@ nav ul li.dropdown:hover .dropdown-menu {
     flex-direction: column;
     text-align: center;
   }
-  .hero-images {
-    grid-template-columns: 1fr 1fr;
+  .hero-images img{
+    grid-row: auto;
+    grid-column: auto;
   }
   .hero-text h1 {
     font-size: 2rem;
@@ -693,6 +694,46 @@ p {
 
 .contact-link:hover span {
   background-color: #666;
+}
+
+@media (max-width: 768px) {
+    /* Navbar adjustments for horizontal space */
+    nav {
+        padding: 0.5rem 2%; /* reduce side padding */
+    }
+
+    nav ul {
+        width: 100%; /* ensure menu fits screen width */
+        left: 0;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* smaller text */
+        padding: 0.4rem 1rem; /* reduce horizontal padding */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem; /* smaller brand text */
+    }
+
+    .navbar-toggle {
+        font-size: 1.8rem; /* smaller hamburger */
+    }
+
+    /* Contact Us section adjustments for horizontal space */
+    .contact-section {
+        padding: 2rem 1rem; /* reduce side padding */
+        text-align: center; /* center content */
+    }
+
+    .contact-link {
+        font-size: 1.8rem; /* smaller text for button */
+        gap: 8px; /* reduce space between text and spans */
+    }
+
+    .contact-link span {
+        min-width: 60px; /* reduce horizontal line width */
+    }
 }
 
 /* Fade-in for the body */
