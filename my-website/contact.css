@@ -297,6 +297,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 @media (max-width: 768px) {
     .contact-section {
         padding: 3rem 1.5rem;
+        padding-top: 7rem;
     }
 
     .contact-wrapper {

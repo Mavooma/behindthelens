@@ -87,3 +87,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 4000);
   }
 });
+
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+// Elements to animate
+document.querySelectorAll(
+  'nav, .contact-section, .contact-form, .contact-info, .footer'
+).forEach((el) => observer.observe(el));
