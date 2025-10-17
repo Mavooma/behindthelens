@@ -467,10 +467,14 @@ p {
 
 /* Testimonial Casserole */
 .testimonial-casserole {
-    overflow: hidden;
+    overflow: auto;
+    overflow-y: hidden;
     white-space: nowrap;
     padding: 2rem 0;
     background: #000;
+    position: relative;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: to;
 }
 
 .testimonial-track {
@@ -510,9 +514,31 @@ p {
     object-fit: cover;
 }
 
-@keyframes testimonial-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause animation when user hovers or touches */
+.testimonial-casserole:hover .testimonial-track,
+.testimonial-casserole:active .testimonial-track {
+  animation-play-state: paused;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 85%;
+  }
+
+  .testimonial-casserole {
+    scroll-snap-type: x mandatory;
+  }
+
+  /* Optional: Hide scrollbar */
+  .testimonial-casserole::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Footer */

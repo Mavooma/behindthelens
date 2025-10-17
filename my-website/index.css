@@ -198,7 +198,7 @@ nav ul li.dropdown:hover .dropdown-menu {
   left: 50%;
   width: 900px;       /* fixed width for the lens image */
   height: 900px;      /* fixed height to ensure visibility */
-  background: url("images/Lenz.png") no-repeat center;
+  background: url("images/lenss.png") no-repeat center;
   background-size: contain; /* keeps lens fully visible */
   opacity: 0.25;      /* very faded behind text */
   transform: translate(-50%, -50%); /* center within .hero-text */

@@ -1,311 +1,296 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
-    scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* NAVBAR */
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
 }
 
 nav .navbar-brand {
-    font-family: "Playfair Display", serif;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 
 nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
 nav ul li {
-    position: relative; /* Needed for dropdown positioning */
+  position: relative;
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #fff;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: gray;
+  color: gray;
 }
 
 /* Dropdown Menu */
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; /* right below parent */
-    left: 0;
-    background: #000;
-    list-style: none;
-    margin: 0;
-    padding: 0.5rem 0;
-    min-width: 180px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 6px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
 }
 
 .dropdown-menu li {
-    width: 100%;
+  width: 100%;
 }
 
 .dropdown-menu li a {
-    display: block;
-    padding: 0.6rem 1rem;
-    font-size: 0.95rem;
-    color: gray;
-    transition: background 0.3s ease, color 0.3s ease;
+  display: block;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  color: gray;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-menu li a:hover {
-    background: #000;
-    color: white;
+  background: #000;
+  color: white;
 }
 
 /* Show dropdown on hover (desktop) */
 nav ul li.dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 
-/* Hamburger Button (hidden by default) */
+/* Hamburger Button */
 .navbar-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
 }
 
-/* Responsive Navbar */
+/* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
-    /* Show hamburger button */
-    .navbar-toggle {
-        display: block;
-    }
+  .navbar-toggle {
+    display: block;
+  }
 
-    /* Hide the menu by default */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #000;
-        padding: 1rem 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
 
-    /* Show menu when active */
-    nav ul.active {
-        display: flex;
-    }
+  nav ul.active {
+    display: flex;
+  }
 
-    /* Center menu items vertically */
-    nav ul li {
-        text-align: center;
-        margin: 0.5rem 0;
-    }
+  nav ul li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
 
-    /* Dropdowns inside mobile menu */
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        border-radius: 0;
-        background: transparent;
-        padding: 0;
-    }
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+  }
 
-    .dropdown-menu li a {
-        padding: 0.6rem 1rem;
-    }
+  .dropdown-menu li a {
+    padding: 0.6rem 1rem;
+  }
 
-    /* Show dropdown when parent is tapped/clicked */
-    nav ul li.dropdown .dropdown-menu {
-        display: none;
-    }
+  nav ul li.dropdown .dropdown-menu {
+    display: none;
+  }
 
-    nav ul li.dropdown.active .dropdown-menu {
-        display: block;
-    }
+  nav ul li.dropdown.active .dropdown-menu {
+    display: block;
+  }
 }
 
-/* Section Base */
-    section {
-      padding: 60px 10%;
-    }
+/* SECTIONS BASE */
+section {
+  padding: 60px 10%;
+}
 
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #fff;
-    }
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
 
-    p {
-      color: #ccc;
-      line-height: 1.7;
-    }
-    section {
-      padding: 60px 10%;
-    }
+p {
+  color: #ccc;
+  line-height: 1.7;
+}
 
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #fff;
-    }
+/* ABOUT SECTION */
+.about-section {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
 
-    p {
-      color: #ccc;
-      line-height: 1.7;
-    }
-
-    /* --- Slanted About Section --- */
-    .about-section {
-      display: flex;
-      align-items: stretch;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 60px;
-    }
-
-    .about-image {
-      flex: 1;
-    }
+.about-image {
+  flex: 1;
+}
 
 .about-image img {
-  width: 70%;       /* smaller width */
-  height: auto;     /* keeps natural aspect ratio */
-  max-width: 400px; /* optional: put a cap so it never gets too big */
+  width: 70%;
+  height: auto;
+  max-width: 400px;
   object-fit: cover;
-  display: block;   /* removes any inline spacing */
-  margin: 0 auto;   /* centers it if inside flex */
+  display: block;
+  margin: 0 auto;
 }
 
-    .about-text {
-      flex: 1;
-      padding: 60px 40px;
-      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.about-text {
+  flex: 1;
+  padding: 60px 40px;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .about-text h3 {
-      font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 10px;
-    }
+.about-text h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
 
-    .about-text h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-    .about-text button {
-      background: #fff;
-      font-size: 1rem;
-      color: black;
-      padding: 15px 25px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: bold;
-      margin-top: 20px;
-      width: fit-content;
-    }
+.about-text button {
+  background: #fff;
+  font-size: 1rem;
+  color: black;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  width: fit-content;
+}
 
-    /* Vision & Mission */
-    .vision-mission {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      margin-top: 30px;
-    }
+/* VISION & MISSION */
+.vision-mission {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 10px;
+  padding-top: 5px;
+}
 
-    .vision-mission div {
-      flex: 1;
-      background: #111;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(255,255,255,0.1);
-    }
+.vision-mission div {
+  flex: 1;
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+}
 
-    .vision-mission h3 {
-      margin-bottom: 15px;
-      color: #fff;
-      font-size: 1.5rem;
-    }
+.vision-mission h3 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 1.5rem;
+}
 
-    /* Hire Us Section */
-    .hire-section {
-      background: url('https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center/cover;
-      text-align: center;
-      padding: 60px 10px;
-      border-radius: 15px;
-      margin-top: 60px;
-      position: relative;
-    }
+/* HIRE US SECTION */
+.hire-section {
+  background: url('https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+    no-repeat center/cover;
+  text-align: center;
+  padding: 60px 10px;
+  border-radius: 15px;
+  margin-top: 60px;
+  position: relative;
+}
 
-    .hire-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 15px;
-    }
+.hire-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+}
 
-    .hire-section h2,
-    .hire-section button {
-      position: relative;
-      z-index: 1;
-    }
+.hire-section h2,
+.hire-section button {
+  position: relative;
+  z-index: 1;
+}
 
-    .hire-section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+.hire-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-    .hire-section button {
-      background: #fff;
-      color: #000;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.hire-section button {
+  background: #fff;
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    .founder-section {
+/* ===========================
+   FOUNDER SECTION
+=========================== */
+.founder-section {
   padding: 60px 10%;
   margin-bottom: 40px;
   background: #000;
@@ -322,10 +307,10 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .founder-section h2 {
-  font-size: 2.5rem;     /* adjust size as needed */
-  color: #fff;      /* your desired blue */
-  margin-bottom: 2rem; /* spacing below the heading */
-  text-align: center;  /* center it */
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .founder-photo {
@@ -353,119 +338,132 @@ nav ul li.dropdown:hover .dropdown-menu {
   color: #ddd;
 }
 
-    /* Team Section */
-    .team-section {
-      text-align: center;
-      padding: 0 10%;
-    }
+/* ===========================
+   TEAM SECTION
+=========================== */
+.team-section {
+  text-align: center;
+  padding: 0 10%;
+}
 
-    .team-carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 20px 20px 20px 60px;
-      scrollbar-width: none;
-    }
+.team-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 20px 20px 60px;
+  scrollbar-width: none;
+}
 
-    .team-carousel::-webkit-scrollbar {
-      display: none;
-    }
+.team-carousel::-webkit-scrollbar {
+  display: none;
+}
 
-    .team-member {
-      flex: 0 0 250px;
-      background: #111;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 6px 15px rgba(255,255,255,0.1);
-    }
+.team-member {
+  flex: 0 0 250px;
+  background: #111;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+}
 
-    .team-member img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
+.team-member img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
 
 .team-section h2 {
-  font-size: 2.5rem; /* adjust size as needed */
-  color: #fff;  /* the blue you want */
+  font-size: 2.5rem;
+  color: #fff;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-    .team-member h4 {
-      margin-bottom: 5px;
-      color: #fff;
-    }
+.team-member h4 {
+  margin-bottom: 5px;
+  color: #fff;
+}
 
-    .team-member p {
-      font-size: 0.9rem;
-      color: #aaa;
-    }
+.team-member p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
 
-    /* Responsive */
-    @media(max-width: 900px) {
-      .about-section {
-        flex-direction: column;
-      }
-      .about-text {
-        clip-path: none;
-        border-radius: 0 0 15px 15px;
-      }
-      .vision-mission {
-        flex-direction: column;
-      }
-    }
+/* ===========================
+   RESPONSIVE (ABOUT / VISION)
+=========================== */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+  }
 
-    /* Footer Styles */
+  .about-text {
+    clip-path: none;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .vision-mission {
+    flex-direction: column;
+  }
+}
+
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
-    background-color: #000; /* Black background for the footer */
-    padding: 20px 0;
-    border-top: 1px solid #111; /* Light gray border at the top */
+  background-color: #000;
+  padding: 20px 0;
+  border-top: 1px solid #111;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between; /* Space between logo, nav, and social icons */
-    align-items: center; /* Vertically center the content */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; /* Add padding on the sides */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-content .logo {
   font-family: "Playfair Display", serif;
   font-size: 1.5em;
   font-weight: bold;
-  text-align: center;     /* centers it horizontally */
-  margin-top: 10px;       /* optional spacing */
+  text-align: center;
+  margin-top: 10px;
+  animation: floatLogo 6s ease-in-out infinite;
 }
 
 .footer-content .logo a {
-  color: inherit;         /* use same color as parent */
-  text-decoration: none;  /* remove underline */
-  display: inline-block;  /* helps with centering */
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.footer-nav, .social-icons, .footer-bottom-nav {
-    display: flex;
-    gap: 20px; /* Space between each list item */
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-nav,
+.social-icons,
+.footer-bottom-nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer-nav a, .footer-bottom-nav a {
-    text-decoration: none;
-    color: #fff;
+.footer-nav a,
+.footer-bottom-nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
-.footer-nav a:hover, .footer-bottom-nav a:hover {
-    color: #444; /* Add hover effect for links */
+.footer-nav a:hover,
+.footer-bottom-nav a:hover {
+  color: #444;
 }
 
 .social-icons {
-  list-style: none;
   display: flex;
   gap: 15px;
   padding: 0;
@@ -479,60 +477,254 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 .social-icons li a:hover {
-  color: #444; /* Green hover color */
+  color: #444;
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 20px auto 0; /* Center align and space above */
-    padding: 0 20px; /* Add padding on the sides */
-    border-top: 1px solid #ddd; /* Light gray border on top */
-    padding-top: 10px; /* Add padding on top after the border */
-    font-size: 0.9em; /* Slightly smaller text for the bottom section */
-    color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 10px 20px 0;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+  color: #fff;
 }
 
 .footer-bottom-nav {
-    gap: 15px; /* Smaller gap for the bottom nav links */
+  gap: 15px;
 }
 
-/* Responsive Styles */
+/* ===========================
+   FOOTER RESPONSIVE
+=========================== */
 @media (max-width: 768px) {
-      .footer-content {
-        flex-direction: column; /* Stack footer items vertically */
-        text-align: center; /* Center text */
-    }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .footer-nav, .social-icons, .footer-bottom-nav {
-        flex-direction: column; /* Stack items vertically */
-        gap: 8px; /* Reduced space between footer items */
-    }
+  .footer-nav,
+  .social-icons,
+  .footer-bottom-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
 
-    .footer-bottom-nav {
-        margin-top: 15px; /* Add space above bottom navigation */
-    }
+  .footer-bottom-nav {
+    margin-top: 15px;
+  }
 }
 
-/* Fade-in body when page loads */
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+  }
+
+  section {
+    padding: 40px 6%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  nav {
+    padding: 0.8rem 5%;
+  }
+
+  nav .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .navbar-toggle {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    padding: 1rem 0;
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .about-text {
+    padding: 40px 20px;
+    clip-path: none;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-text button {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 20px;
+    font-size: 0.95rem;
+  }
+
+  .vision-mission {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 5px;
+    margin-top: 0;
+  }
+
+  .vision-mission div {
+    padding: 15px;
+  }
+
+  .vision-mission h3 {
+    font-size: 1.3rem;
+  }
+
+  .founder-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .founder-info {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .founder-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .team-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .team-member {
+    flex: 0 0 80%;
+    margin: 0 auto;
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+  }
+
+  .team-member h4 {
+    font-size: 1rem;
+  }
+
+  .hire-section {
+    padding: 50px 15px;
+    margin-top: 40px;
+  }
+
+  .hire-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .hire-section button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-content .logo {
+    font-size: 1.3rem;
+  }
+
+  .footer-nav,
+  .social-icons,
+  .footer-bottom-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-bottom-nav {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 10px;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+
+  .team-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+  }
+
+  .team-member {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    background: #111;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ANIMATIONS */
 body {
   opacity: 0;
   animation: fadeInBody 1s ease-in forwards;
 }
+
 @keyframes fadeInBody {
   to {
     opacity: 1;
   }
 }
 
-/* Navbar slide-down animation */
 nav {
   transform: translateY(-100%);
   opacity: 0;
   animation: slideDown 1s ease forwards;
 }
+
 @keyframes slideDown {
   to {
     transform: translateY(0);
@@ -540,8 +732,7 @@ nav {
   }
 }
 
-/* Fade + slide reveal for each section */
-section, 
+section,
 .about-section,
 .team-section,
 .founder-section,
@@ -550,6 +741,7 @@ section,
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 section.visible,
 .about-section.visible,
 .team-section.visible,
@@ -559,55 +751,64 @@ section.visible,
   transform: translateY(0);
 }
 
-/* Buttons pulse when hovered */
-button, 
+button,
 .about-text button,
 .hire-section button {
   transition: transform 0.3s ease;
 }
+
 button:hover,
 .about-text button:hover,
 .hire-section button:hover {
   animation: pulse 0.8s ease-in-out;
 }
+
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
-/* Floating logo animation (footer) */
-.footer-content .logo {
-  animation: floatLogo 6s ease-in-out infinite;
-}
 @keyframes floatLogo {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
-/* Smooth hover glow for links */
 nav ul li a:hover,
 .footer-nav a:hover,
 .footer-bottom-nav a:hover {
   color: #888;
-  text-shadow: 0 0 5px rgba(255,255,255,0.3);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
-/* Team members gentle hover scale */
 .team-member {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .team-member:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
 }
 
-/* Fade in about image */
 .about-image img {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 1s ease, transform 1s ease;
 }
+
 .about-image img.visible {
   opacity: 1;
   transform: scale(1);

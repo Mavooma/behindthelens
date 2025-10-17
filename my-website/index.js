@@ -1,6 +1,7 @@
 // Navbar toggle
 const toggle = document.querySelector(".navbar-toggle");
 const menu = document.querySelector(".navbar-menu");
+const dropdowns = document.querySelectorAll('.navbar-menu li.dropdown');
 
 if (toggle && menu) {
   toggle.addEventListener("click", () => {
@@ -8,18 +9,26 @@ if (toggle && menu) {
   });
 }
 
-// Function to check if the service cards are visible on scroll
+// Dropdowns for mobile
+dropdowns.forEach(drop => {
+  drop.addEventListener("click", (e) => {
+    drop.classList.toggle("active");
+    e.stopPropagation(); // Prevent closing parent menu
+  });
+});
+
+// Service cards reveal on scroll
 function checkCards() {
   const serviceCards = document.querySelectorAll(".service-card");
-  const triggerBottom = window.innerHeight * 0.9; // 90% of the viewport height
+  const triggerBottom = window.innerHeight * 0.9; // 90% of viewport height
 
   serviceCards.forEach((card) => {
     const cardTop = card.getBoundingClientRect().top;
 
     if (cardTop < triggerBottom) {
-      card.classList.add("show"); // Adds class when the card is visible
+      card.classList.add("show");
     } else {
-      card.classList.remove("show"); // Removes class when it's not visible
+      card.classList.remove("show");
     }
   });
 }
@@ -31,11 +40,9 @@ const grids = document.querySelectorAll(".portfolio-grid");
 if (buttons.length && grids.length) {
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      // Remove active states
       buttons.forEach((b) => b.classList.remove("active"));
       grids.forEach((grid) => grid.classList.remove("active"));
 
-      // Add active to clicked
       const targetGrid = document.getElementById(btn.dataset.tab);
       btn.classList.add("active");
       if (targetGrid) targetGrid.classList.add("active");
@@ -49,20 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   faqs.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const item = btn.closest(".faq-item"); // parent .faq-item
+      const item = btn.closest(".faq-item");
       if (!item) return;
 
-      // Close all other items
       document.querySelectorAll(".faq-item").forEach((faq) => {
         if (faq !== item) faq.classList.remove("active");
       });
 
-      // Toggle the clicked one
       item.classList.toggle("active");
     });
   });
 
-  // Section reveal on scroll
+  // Reveal sections on scroll
   const sections = document.querySelectorAll(
     "section, .services-section, .our-work, .about-section, .contact-section"
   );
@@ -81,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Intersection observer for portfolio items
-const observer = new IntersectionObserver(
+const portfolioObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -93,10 +98,10 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".portfolio-grid, .portfolio-card").forEach((el) => {
-  observer.observe(el);
+  portfolioObserver.observe(el);
 });
 
-// 👇 Added observer2 script (kept original code intact)
+// Intersection observer for key sections (footer, nav, faq, etc.)
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -105,12 +110,23 @@ const observer2 = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.2 });
 
-// Observe key sections and elements
 document.querySelectorAll(
   'nav, section, .faq-section, .faq-item, .footer'
 ).forEach((el) => observer2.observe(el));
 
-// 👇 Added your new reveal-on-scroll code (without changing anything)
+// 👇 YOUR NEW PRICING SECTION INTERSECTION OBSERVER
+const pricingObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('#pricing, .pricing-header, .pricing-intro, .pricing-card, .cta')
+  .forEach((el) => pricingObserver.observe(el));
+
+// Optional: reveal-on-scroll for other specific sections
 const sections2 = document.querySelectorAll(
   "section, .about-section, .team-section, .founder-section, .hire-section, .about-image img"
 );
