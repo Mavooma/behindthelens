@@ -114,7 +114,7 @@ document.querySelectorAll(
   'nav, section, .faq-section, .faq-item, .footer'
 ).forEach((el) => observer2.observe(el));
 
-// 👇 YOUR NEW PRICING SECTION INTERSECTION OBSERVER
+// NEW PRICING SECTION INTERSECTION OBSERVER
 const pricingObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
